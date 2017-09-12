@@ -1,7 +1,7 @@
 const request = require('request-promise-native');
 const assert = require('assert');
 
-const { WeixinApi, ApiExtend } = require('../weixin');
+const { WeixinApi, ApiExtend, ArgumentError } = require('../');
 
 describe('weixin.api.test.js', function () {
 
@@ -17,6 +17,34 @@ describe('weixin.api.test.js', function () {
     // opts
     let api = new WeixinApi('appId', 'appSecret');
     let stream = function () { return request('https://i.pinimg.com/originals/c6/54/79/c654790071a6242a1ef2990ba681f38f.jpg'); };
+
+
+    it('custom extend', async function () {
+
+        let MessageExtend = class MessageExtend extends ApiExtend {
+            async send(to, content) {
+                return await this.invoke(
+                    'https://api.weixin.qq.com/cgi-bin/message/custom/send',
+                    // request opts.   
+                    // (see: https://github.com/request/request#requestoptions-callback)
+                    {
+                        body: {
+                            touser: to, msgtype: 'text',
+                            text: { content }
+                        }
+                    }, 'POST');
+            }
+        };
+
+        api.extend('message', MessageExtend);
+
+
+        let result = await api.message.send('openId', 'content');
+
+        assert(result);
+
+    });
+
 
     it('media add', async function () {
 

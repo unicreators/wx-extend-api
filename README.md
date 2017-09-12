@@ -3,16 +3,16 @@
 wechat/weixin extend api.
 
 
-### Install
+## Install
 
 ```sh
 $ npm install wx-extend-api
 ```
 
 
-### Usage
+## Usage
 
-#### STEP 1: Custom extend
+### STEP 1: Custom extend
 
 
 ```js
@@ -36,7 +36,7 @@ let MessageExtend = class MessageExtend extends ApiExtend {
 ```
 
 
-#### STEP 2: Register extend
+### STEP 2: Register extend
 
 
 ```js
@@ -53,7 +53,7 @@ api.extend('message', MessageExtend);
 
 
 
-#### STEP 3: Use
+### STEP 3: Use
 
 
 ```js

@@ -1,36 +1,37 @@
 {
-	"name": "wx-extend-api",
-	"version": "0.4.4",
-	"description": "weixin/wechat extend api.",
-	"main": "index.js",
-	"directories": {
-		"test": "test"
-	},
-	"scripts": {
-		"test": "mocha test"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/unicreators/wx-extend-api.git"
-	},
-	"keywords": [
-		"weixin",
-		"wechat",
-		"wx",
-		"extend",
-		"api"
-	],
-	"author": "yichen",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/unicreators/wx-extend-api/issues"
-	},
-	"homepage": "https://github.com/unicreators/wx-extend-api#readme",
-	"dependencies": {
-		"request-promise-native": "^1.0.4"
-	},
-	"devDependencies": {
-		"koa": "^2.3.0",
-		"mocha": "^3.5.0"
-	}
+  "name": "wx-extend-api",
+  "version": "0.4.5",
+  "description": "weixin/wechat extend api.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unicreators/wx-extend-api.git"
+  },
+  "keywords": [
+    "weixin",
+    "wechat",
+    "wx",
+    "extend",
+    "api"
+  ],
+  "author": "yichen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unicreators/wx-extend-api/issues"
+  },
+  "homepage": "https://github.com/unicreators/wx-extend-api#readme",
+  "dependencies": {
+    "extend-api": "^1.0.0"
+  },
+  "devDependencies": {
+    "koa": "^2.3.0",
+    "mocha": "^3.5.0",
+    "request-promise-native": "^1.0.4"
+  }
 }

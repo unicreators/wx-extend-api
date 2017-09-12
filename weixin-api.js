@@ -1,7 +1,7 @@
 //////////////////////////////
 ///  yichen
 
-const { Api, ArgumentError } = require('../api'),
+const { Api, ArgumentError } = require('extend-api'),
     WeixinToken = require('./token'),
     WeixinApiError = require('./error');
 
@@ -45,5 +45,5 @@ class WeixinApi extends Api {
 
 }
 
-module.exports = Object.assign(WeixinApi, { WeixinApi, WeixinApiError }, require('../api'));
+module.exports = Object.assign(WeixinApi, { WeixinApi, WeixinApiError });
 

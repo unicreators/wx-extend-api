@@ -1,7 +1,7 @@
 //////////////////////////////
 ///  yichen
 
-const { ApiExtend } = require('../../api');
+const { ApiExtend } = require('extend-api');
 const URL_MEDIA = {
     ADD_TEMP: { url: 'http://file.api.weixin.qq.com/cgi-bin/media/upload', method: 'POST' },
     GET_TEMP: { url: 'http://file.api.weixin.qq.com/cgi-bin/media/get', method: 'GET' },
